@@ -1,4 +1,7 @@
 import { db } from './db/index.ts'
 
-const users = await db.query.user.findMany()
-console.log(users)
+Deno.serve(async (_req) => {
+  const users = await db.query.user.findMany()
+
+  return Response.json(users)
+})
