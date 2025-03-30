@@ -1,0 +1,8 @@
+{
+  "build": {
+    "buildCommand": "deno compile -A main.ts"
+  },
+  "deploy": {
+    "startCommand": "./deno-drizzle"
+  }
+}
