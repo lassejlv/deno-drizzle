@@ -1,5 +1,5 @@
 CREATE TABLE `user` (
-	`id` integer PRIMARY KEY NOT NULL,
+	`id` text PRIMARY KEY NOT NULL,
 	`username` text NOT NULL
 );
 --> statement-breakpoint

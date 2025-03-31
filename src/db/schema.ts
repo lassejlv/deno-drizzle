@@ -1,7 +1,8 @@
 import { sqliteTable } from 'drizzle-orm/sqlite-core'
+import { v7 as uuid } from 'uuid'
 
 export const user = sqliteTable('user', (t) => ({
-  id: t.integer().primaryKey(),
+  id: t.text().primaryKey().$defaultFn(uuid),
   username: t.text().notNull().unique(),
 }))
 
