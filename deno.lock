@@ -3,10 +3,13 @@
   "specifiers": {
     "jsr:@std/assert@1": "1.0.12",
     "jsr:@std/internal@^1.0.6": "1.0.6",
+    "npm:@hono/zod-validator@~0.4.3": "0.4.3_hono@4.7.5_zod@3.24.2",
     "npm:@libsql/client@~0.15.1": "0.15.1",
     "npm:drizzle-kit@*": "0.30.6_esbuild@0.19.12",
     "npm:drizzle-kit@~0.30.6": "0.30.6_esbuild@0.19.12",
     "npm:drizzle-orm@0.41": "0.41.0_@libsql+client@0.15.1",
+    "npm:drizzle-zod@~0.7.1": "0.7.1_drizzle-orm@0.41.0__@libsql+client@0.15.1_zod@3.24.2_@libsql+client@0.15.1",
+    "npm:hono@^4.7.5": "4.7.5",
     "npm:zod@^3.24.2": "3.24.2"
   },
   "jsr": {
@@ -173,6 +176,13 @@
     "@esbuild/win32-x64@0.19.12": {
       "integrity": "sha512-T1QyPSDCyMXaO3pzBkF96E8xMkiRYbUEZADd29SyPGabqxMViNoii+NcK7eWJAEoU6RZyEm5lVSIjTmcdoB9HA=="
     },
+    "@hono/zod-validator@0.4.3_hono@4.7.5_zod@3.24.2": {
+      "integrity": "sha512-xIgMYXDyJ4Hj6ekm9T9Y27s080Nl9NXHcJkOvkXPhubOLj8hZkOL8pDnnXfvCf5xEE8Q4oMFenQUZZREUY2gqQ==",
+      "dependencies": [
+        "hono",
+        "zod"
+      ]
+    },
     "@libsql/client@0.15.1": {
       "integrity": "sha512-BzAj/nEoiH8FhOrFCrN9NFll97iMbTUQA/RfZbc+Na/Iyu9w/vt1+0zLf7OaQCTeQ+7g5ScanLuRMidTcz9XgQ==",
       "dependencies": [
@@ -278,6 +288,13 @@
         "@libsql/client"
       ]
     },
+    "drizzle-zod@0.7.1_drizzle-orm@0.41.0__@libsql+client@0.15.1_zod@3.24.2_@libsql+client@0.15.1": {
+      "integrity": "sha512-nZzALOdz44/AL2U005UlmMqaQ1qe5JfanvLujiTHiiT8+vZJTBFhj3pY4Vk+L6UWyKFfNmLhk602Hn4kCTynKQ==",
+      "dependencies": [
+        "drizzle-orm",
+        "zod"
+      ]
+    },
     "env-paths@3.0.0": {
       "integrity": "sha512-dtJUTepzMW3Lm/NPxRf3wP4642UWhjL2sQxc+ym2YMj1m/H2zDNQOlezafzkHwn6sMstjHTwG6iQQsctDW/b1A=="
     },
@@ -373,6 +390,9 @@
         "resolve-pkg-maps"
       ]
     },
+    "hono@4.7.5": {
+      "integrity": "sha512-fDOK5W2C1vZACsgLONigdZTRZxuBqFtcKh7bUQ5cVSbwI2RWjloJDcgFOVzbQrlI6pCmhlTsVYZ7zpLj4m4qMQ=="
+    },
     "isexe@3.1.1": {
       "integrity": "sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ=="
     },
@@ -451,9 +471,12 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1",
+      "npm:@hono/zod-validator@~0.4.3",
       "npm:@libsql/client@~0.15.1",
       "npm:drizzle-kit@~0.30.6",
       "npm:drizzle-orm@0.41",
+      "npm:drizzle-zod@~0.7.1",
+      "npm:hono@^4.7.5",
       "npm:zod@^3.24.2"
     ]
   }

@@ -1,6 +1,6 @@
 {
   "build": {
-    "buildCommand": "deno compile --output app -A main.ts"
+    "buildCommand": "deno task compile"
   },
   "deploy": {
     "startCommand": "./app"
