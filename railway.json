@@ -1,8 +1,0 @@
-{
-  "build": {
-    "buildCommand": "deno task compile"
-  },
-  "deploy": {
-    "startCommand": "./app"
-  }
-}
