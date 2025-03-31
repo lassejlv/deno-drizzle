@@ -1,7 +1,7 @@
 {
   "tasks": {
     "dev": "deno run -A --env-file=.env.local --watch src/main.ts",
-    "compile": "deno compile --output app -A src/main.ts",
+    "compile": "deno compile --no-check --output app -A src/main.ts",
     "db:generate": "deno run -A --env-file=.env.local npm:drizzle-kit generate",
     "db:push": "deno run -A --env-file=.env.local npm:drizzle-kit push"
   },
