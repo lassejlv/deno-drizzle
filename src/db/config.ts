@@ -4,10 +4,9 @@ import { env } from '../lib/env.ts'
 export default defineConfig({
   schema: 'src/db/schema.ts',
   out: 'migrations',
-  dialect: 'turso',
+  dialect: 'postgresql',
   dbCredentials: {
-    url: env.TURSO_URL,
-    authToken: env.TURSO_TOKEN,
+    url: env.DATABASE_URL,
   },
   strict: true,
 })

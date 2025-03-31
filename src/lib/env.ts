@@ -1,8 +1,7 @@
-import { z } from "zod";
+import { z } from 'zod'
 
 const envSchema = z.object({
-  TURSO_URL: z.string(),
-  TURSO_TOKEN: z.string(),
-});
+  DATABASE_URL: z.string(),
+})
 
-export const env = envSchema.parse(Deno.env.toObject());
+export const env = envSchema.parse(Deno.env.toObject())
