@@ -1,6 +1,6 @@
-import { drizzle } from 'drizzle-orm/libsql'
-import * as schema from './schema.ts'
-import { env } from '../env.ts'
+import { drizzle } from "drizzle-orm/libsql";
+import * as schema from "./schema.ts";
+import { env } from "../env.ts";
 
 export const db = drizzle({
   connection: {
@@ -9,4 +9,4 @@ export const db = drizzle({
   },
   schema,
   logger: true,
-})
+});

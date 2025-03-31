@@ -8,6 +8,13 @@
       "when": 1743409382535,
       "tag": "0000_condemned_shiver_man",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1743410608728,
+      "tag": "0001_certain_proteus",
+      "breakpoints": true
     }
   ]
 }
