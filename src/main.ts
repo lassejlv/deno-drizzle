@@ -17,7 +17,7 @@ const app = new Hono()
 app.get('/', (c) => c.text('Hello Hono!'))
 
 app.get('/users', async (c) => {
-  const users = await db.query.user.findMany()
+  const users = await db.query.user.findMany({ columns: { password_hash: false } })
   return c.json(users)
 })
 
@@ -33,7 +33,7 @@ app.post('/users', zValidator('json', CreateUserSchema), async (c) => {
       email: data.email,
       password_hash,
     })
-    .returning()
+    .returning({ id: user.id, username: user.username, email: user.email })
   return c.json(new_user[0])
 })
 
