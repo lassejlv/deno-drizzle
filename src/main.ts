@@ -14,7 +14,7 @@ app.get('/users', async (c) => {
 
 app.post('/users', zValidator('json', userSchemaInsert), async (c) => {
   const data = c.req.valid('json')
-  const new_user = await db.insert(user).values(data).returning().get()
+  const new_user = await db.insert(user).values({ username: data.username }).returning().get()
   return c.json(new_user)
 })
 
